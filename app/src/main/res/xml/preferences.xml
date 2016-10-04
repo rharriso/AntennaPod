@@ -22,6 +22,17 @@
             android:summary="@string/pref_persistNotify_sum"
             android:title="@string/pref_persistNotify_title"/>
     </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/queue_label">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="prefQueueAddToFront"
+            android:summary="@string/pref_queueAddToFront_sum"
+            android:title="@string/pref_queueAddToFront_title"/>
+        />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/playback_pref">
         <CheckBoxPreference
             android:defaultValue="true"
@@ -42,11 +53,17 @@
             android:key="prefFollowQueue"
             android:summary="@string/pref_followQueue_sum"
             android:title="@string/pref_followQueue_title"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="prefAutoDelete"
+            android:summary="@string/pref_auto_delete_sum"
+            android:title="@string/pref_auto_delete_title"/>
         <Preference
             android:key="prefPlaybackSpeedLauncher"
             android:summary="@string/pref_playback_speed_sum"
             android:title="@string/pref_playback_speed_title" />
-        
+
         <CheckBoxPreference
             android:defaultValue="false"
             android:enabled="true"
@@ -105,6 +122,7 @@
         </PreferenceScreen>
 
     </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/services_label">
         <PreferenceScreen
             android:key="prefFlattrSettings"
